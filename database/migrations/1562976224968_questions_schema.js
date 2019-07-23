@@ -10,9 +10,9 @@ class QuestionsSchema extends Schema {
       table.integer('number', 10).notNullable()
       table.text('description')
       table.string('type',80).notNullable()
-      table.string('options').notNullable()
-      table.string('answer',80).notNullable()
-      table.integer('timer').notNullable()
+      table.string('options')
+      table.string('answer',80)
+      table.integer('timer')
       table.timestamps()
     })
   }
