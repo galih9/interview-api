@@ -7,7 +7,7 @@
 |
 | Http routes are entry points to your web application. You can create
 | routes for different URLs and bind Controller actions to them.
-|
+| 
 | A complete guide on routing is available here.
 | http://adonisjs.com/docs/4.1/routing
 |
@@ -24,6 +24,7 @@ Route.group(() => {
 
   Route.post('users','UserController.store')
   Route.get('questions','QuestionController.index')
+  Route.get('question','QuestionController.show')
   Route.post('answer','AnswerController.store')
 
 }).prefix('api/v1')
