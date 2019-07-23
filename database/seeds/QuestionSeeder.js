@@ -24,6 +24,7 @@ class QuestionSeeder {
                       number: 1,
                       description: "Apa makna pekerjaan buat Anda?",
                       type: "text",
+                      options: null,
                       timer: 3,
                       created_at: now,
                       updated_at: now
@@ -50,6 +51,7 @@ class QuestionSeeder {
                       number: 4,
                       description: "Ceritakan sedikit tentang anda",
                       type: "video",
+                      options: null,
                       timer: 10,
                       created_at: now,
                       updated_at: now
