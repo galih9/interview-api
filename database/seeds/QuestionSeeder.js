@@ -17,7 +17,7 @@ const Database = use('Database')
 class QuestionSeeder {
   async run () {
     const date = new Date()
-    const now = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+    // const null = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     await Database.from('questions')
                   .insert([
                     {
@@ -26,8 +26,8 @@ class QuestionSeeder {
                       type: "text",
                       options: null,
                       timer: 3,
-                      created_at: now,
-                      updated_at: now
+                      created_at: null,
+                      updated_at: null
                     },
                     {
                       number: 2,
@@ -35,8 +35,8 @@ class QuestionSeeder {
                       type: "multiple select",
                       options: "merah,hitam,putih,kuning",
                       timer: 1,
-                      created_at: now,
-                      updated_at: now
+                      created_at: null,
+                      updated_at: null
                     },
                     {
                       number: 3,
@@ -44,8 +44,8 @@ class QuestionSeeder {
                       type: "multiple choice",
                       options: "koran,sosial media,radio",
                       timer: 1,
-                      created_at: now,
-                      updated_at: now
+                      created_at: null,
+                      updated_at: null
                     },
                     {
                       number: 4,
@@ -53,8 +53,8 @@ class QuestionSeeder {
                       type: "video",
                       options: null,
                       timer: 10,
-                      created_at: now,
-                      updated_at: now
+                      created_at: null,
+                      updated_at: null
                     }
                   ])
   }
