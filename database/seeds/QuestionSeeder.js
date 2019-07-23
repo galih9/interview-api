@@ -17,16 +17,17 @@ const Database = use('Database')
 class QuestionSeeder {
   async run () {
     const date = new Date()
-    const now = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+    // const "" = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     await Database.from('questions')
                   .insert([
                     {
                       number: 1,
                       description: "Apa makna pekerjaan buat Anda?",
                       type: "text",
+                      options: "",
                       timer: 3,
-                      created_at: now,
-                      updated_at: now
+                      created_at: "",
+                      updated_at: ""
                     },
                     {
                       number: 2,
@@ -34,8 +35,8 @@ class QuestionSeeder {
                       type: "multiple select",
                       options: "merah,hitam,putih,kuning",
                       timer: 1,
-                      created_at: now,
-                      updated_at: now
+                      created_at: "",
+                      updated_at: ""
                     },
                     {
                       number: 3,
@@ -43,16 +44,17 @@ class QuestionSeeder {
                       type: "multiple choice",
                       options: "koran,sosial media,radio",
                       timer: 1,
-                      created_at: now,
-                      updated_at: now
+                      created_at: "",
+                      updated_at: ""
                     },
                     {
                       number: 4,
                       description: "Ceritakan sedikit tentang anda",
                       type: "video",
+                      options: "",
                       timer: 10,
-                      created_at: now,
-                      updated_at: now
+                      created_at: "",
+                      updated_at: ""
                     }
                   ])
   }
