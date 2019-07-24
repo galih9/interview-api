@@ -24,6 +24,23 @@ class QuestionController {
             return response.status(400).json({"message": 'failed'})
         }
       }
+
+  async store({ request, response }) {
+    const req = request.only(["number", "description", "type", "options", "answer", "timer",]);
+    const question = new Question();
+    question.number = req.number;
+    question.description = req.description;
+    question.type = req.type;
+    question.options = req.options;
+    question.answer = req.answer;
+    question.timer =req.timer;
+    try {
+      return response.status(201).json(question)
+    } catch (error) {
+      return response.status(404).json({"message":'failed'})
+    }
+  }
+  
   }
 
 
