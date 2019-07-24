@@ -27,5 +27,5 @@ Route.group(() => {
   Route.get('question','QuestionController.show')
   Route.post('answer','AnswerController.store')
   Route.post('question','QuestionController.store')
-
+  Route.get('users','UserController.index')
 }).prefix('api/v1')

@@ -2,7 +2,15 @@
 const User = use("App/Models/User");
 
 class UserController {
-  async store({ request, response }) {
+  async index({ request , response }){
+    try {
+      return User.all();
+    } catch (error) {
+      response.status(404).json({ message: "Resource not found" });
+    }
+  }
+
+  async store({ request , response }) {
     const reqUser = request.only(["name", "email", "phone"]);
     const user = new User();
     user.name = reqUser.name;
