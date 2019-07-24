@@ -28,4 +28,6 @@ Route.group(() => {
   Route.post('answer','AnswerController.store')
   Route.post('question','QuestionController.store')
   Route.get('users','UserController.index')
+  Route.get('answer','AnswerController.index')
+
 }).prefix('api/v1')

@@ -2,6 +2,14 @@
 const Answer = use('App/Models/Answer')
 
 class AnswerController {
+  async index({ request , response }){
+    try {
+      return Answer.all();
+    } catch (error) {
+      response.status(404).json({ message: "Resource not found" });
+    }
+  }
+
   async store ({ request, response }) {
     const reqAnswer = request.all()
         const answer = new Answer()
